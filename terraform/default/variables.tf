@@ -20,7 +20,7 @@ variable "az_rs_resource_group_name" {
   description = "The name of the Azure Resource Group to use for remote state."
   type        = string
   default     = "dop_tfstate"
-  
+
 }
 variable "az_rs_storage_account_name" {
   description = "The name of the Azure Storage Account to use for remote state."
