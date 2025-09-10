@@ -40,6 +40,10 @@ jobs:
       with:
         terraform_wrapper: false
 
+    # Change to the terraform directory
+    - name: Go to terraform directory
+      run: cd terraform/default
+
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
