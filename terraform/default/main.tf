@@ -15,7 +15,7 @@ module "az_k8s" {
   source              = "../modules/common/az_k8s"
   rg_name             = module.az_rg.rg_name
   rg_location         = module.az_rg.rg_location
-  k8s_node_count      = 3
+  k8s_node_count      = 2
   k8s_username        = "azureadmin"
   ssh_public_key_data = module.az_k8s_ssh.key_data
 }
