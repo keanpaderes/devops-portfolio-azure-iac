@@ -83,7 +83,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: tfplan
-        path: terraform/default/tfplan
+        path: terraform/default
         
     # Create string output of Terraform Plan
     - name: Create String Output
@@ -156,8 +156,8 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: tfplan
-        path: terraform/default/tfplan
+        path: terraform/default
 
     # Terraform Apply
     - name: Terraform Apply
-      run: terraform apply -auto-approve terraform/default/tfplan
+      run: terraform apply -auto-approve tfplan
