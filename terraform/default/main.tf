@@ -1,9 +1,11 @@
+// Resource Group
 module "az_rg" {
   source           = "../modules/common/az_rg"
   project_prefix   = var.project_prefix
   project_location = var.project_location
 }
 
+// SSH Key for AKS
 module "az_k8s_ssh" {
   source         = "../modules/common/az_k8s_ssh"
   project_prefix = var.project_prefix
@@ -11,6 +13,7 @@ module "az_k8s_ssh" {
   rg_location    = module.az_rg.rg_location
 }
 
+// AKS Cluster
 module "az_k8s" {
   source              = "../modules/common/az_k8s"
   rg_name             = module.az_rg.rg_name
